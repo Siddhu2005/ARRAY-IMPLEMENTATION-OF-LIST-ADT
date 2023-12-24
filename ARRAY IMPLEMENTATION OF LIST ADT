@@ -1,0 +1,125 @@
+ARRAY IMPLEMENTATION OF LIST ADT DATE:
+
+AIM: To Write a C++ Program for array implementation of list ADT.
+
+ALGORITHM:
+
+STEP 1: Create nodes first, last, next, prev and cur then set the value as NULL.
+STEP 2: Read the list operation type.
+STEP 3: If operation type is create then process the following steps.
+1.	Allocate memory for node cur.
+2.	Read data in cur's data area.
+3.	Assign cur node as NULL.
+4.	Assign first=last=cur.
+STEP 4:	If operation type is Insert then process the following steps.
+1.	Allocate memory for node cur.
+2.	Read data in cur's data area.
+3.	Read the position the Data to be insert.
+4.	Availability of the position is true then assing cur's node as first and first=cur.
+5.	If availability of position is false then do following steps.
+1.	Assign next as cur and count as zero.
+2.	Repeat the following steps until count less than postion. 1 .Assign prev as next
+2.	Next as prev of node.
+3.	Add count by one.
+4.	If prev as NULL then display the message INVALID POSITION.
+5.	If prev not qual to NULL then do the following steps.
+1.	Assign cur's node as prev's node.
+2.	Assign prev's node as cur.
+STEP 5: If operation type is delete then do the following steps.
+1.	Read the position .
+2.	Check list is Empty .If it is true display the message List empty.
+3.	If position is first.
+1.	Assign cur as first.
+2.	Assign First as first of node.
+3.	Reallocate the cur from memory.
+4.	If position is last.
+1.	Move the current node to prev.
+2.	Cur's node as Null.
+3.	Reallocate the Last from memory.
+4.	Assign last as cur.
+5.	If position is enter Mediate.
+1.	Move the cur to required postion.
+ 
+
+2.	Move the Previous to cur's previous position
+3.	Move the Next to cur's Next position.
+4.	Now assign previous of node as next.
+5.	Reallocate the cur from memory.
+STEP 6: If operation is traverse.
+1.	Assign current as first.
+2.	Repeat the following steps untill cur becomes NULL.
+
+
+SOURCE CODE:
+
+#include<iostream.h> #include<conio.h> #include<process.h> void create();
+void insert(); void deletion(); void search(); void display();
+int a,b[20],n,d,e,f,i; void main()
+{
+int c;
+char g='y'; clrscr(); do
+{
+cout<<"\n Main Menu";
+cout<<"\n 1.Create \n 2.Delete \n 3.Search \n 4.insert \n 5.Display \n 6.Exit"; cout<<"\n enter your choice\n";
+cin>>c; switch(c)
+{
+case 1: create(); break; case 2: deletion(); break; case 3: search(); break; case 4: insert(); break; case 5: display(); break; case 6: exit(0); break; default:
+cout<<"The given number is not between 1-5\n";
+}
+ 
+
+cout<<"\nDo u want to continue \n"; cin>>g;
+clrscr();
+}
+while(g=='y'|| g=='Y'); getch();
+}
+void create()
+{ cout<<"\n Enter the number\n"; cin>>n;
+for(i=0;i<n;i++)
+{
+cin>>b[i];
+}}
+void deletion()
+{
+cout<<"Enter the limit u want to delete \n"; cin>>d;
+for(i=0;i<n;i++)
+{
+if(b[i]==d)
+{ b[i]=0;
+}}}
+void search()
+{
+cout<<"Enter the limit \n"; cin>>e;
+for(i=0;i<n;i++)
+{
+if(b[i]==e)
+{
+cout<<"Value found the position\n"<<b[i];
+}}}
+void insert()
+{
+cout<<"enter how many number u want to insert \n"; cin>>f;
+for(i=0;i<f;i++)
+{
+cin>>b[n++];
+}}
+ 
+
+void display()
+{
+cout<<"\n\n\n"; for(i=0;i<n;i++)
+{
+cout<<"\n\n\n"<<b[i];
+} }
+OUTPUT:
+
+Main Menu 1.Create 2.Delete 3.Search 4.Insert 5.Display 6.Exit
+Enter your choice 1
+Enter the number 2
+3
+4
+Do u want to continue
+
+
+
+
