@@ -1,2 +1,2 @@
-# DATA-STRUCTURES-USING-C++
-It has all C++ Data Structure concepts
+# ARRAY IMPLEMENTATION OF LIST ADT
+A concept of Data Structure in C++ 
